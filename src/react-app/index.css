@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 20% 97%;
+    --foreground: 220 20% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 10%;
+    --primary: 160 84% 39%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 14% 90%;
+    --secondary-foreground: 220 20% 10%;
+    --muted: 220 14% 95%;
+    --muted-foreground: 220 10% 40%;
+    --accent: 175 84% 32%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 13% 88%;
+    --input: 220 13% 88%;
+    --ring: 160 84% 39%;
+    --radius: 0.5rem;
+    --chart-1: 160 84% 39%;
+    --chart-2: 175 84% 32%;
+    --chart-3: 190 90% 35%;
+    --chart-4: 145 70% 45%;
+    --chart-5: 200 75% 40%;
+  }
+
+  .dark {
+    --background: 222 47% 6%;
+    --foreground: 210 40% 98%;
+    --card: 222 47% 9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222 47% 9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 160 84% 45%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217 33% 15%;
+    --muted-foreground: 215 20% 72%;
+    --accent: 175 70% 40%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 217 33% 20%;
+    --input: 217 33% 20%;
+    --ring: 160 84% 45%;
+    --chart-1: 160 84% 45%;
+    --chart-2: 175 70% 40%;
+    --chart-3: 190 80% 45%;
+    --chart-4: 145 65% 50%;
+    --chart-5: 200 70% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    @apply dark;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: "Inter Variable", "Inter", system-ui, sans-serif;
+  }
+
+  button:not([disabled]),
+  [role="button"]:not([disabled]) {
+    cursor: pointer;
+  }
+}
+
+@layer utilities {
+  .gradient-bg {
+    background: linear-gradient(135deg, hsl(222 47% 6%) 0%, hsl(222 47% 11%) 50%, hsl(217 33% 12%) 100%);
+  }
+  
+  .gradient-card {
+    background: linear-gradient(145deg, hsl(222 47% 10%) 0%, hsl(222 47% 8%) 100%);
+  }
+  
+  .gradient-accent {
+    background: linear-gradient(135deg, hsl(302, 84%, 45%) 0%, hsl(175 70% 40%) 100%);
+  }
+  
+  .glow-primary {
+    box-shadow: 0 0 30px -5px hsla(183, 84%, 45%, 0.3);
+  }
+  
+  .glow-accent {
+    box-shadow: 0 0 40px -10px hsla(315, 70%, 40%, 0.4);
+  }
+}
