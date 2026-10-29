@@ -1,4 +1,4 @@
-# 🔐 IoT-Based Smart Access Control System
+# 🔐 Gym Guard :- IoT-Based Smart Access Control System
 
 <p align="center">
   <strong>Connecting Embedded Systems, IoT & Full-Stack Development</strong>
